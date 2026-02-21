@@ -143,18 +143,15 @@ contract SchoolSystem {
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.28;
 
-interface IERC20 {
-    function transfer(address to, uint256 amount) external returns (bool);
-    function transferFrom(address from, address to, uint256 amount) external returns (bool);
-}
+import "../Task1/ERC20-Deployment/src/ERC20.sol";
 
 contract SchoolSystem {
     address public owner;
-    IERC20 public token;
+    ERC20 public token;
 
-    constructor(address _token) {
+    constructor(ERC20 _token) {
         owner = msg.sender;
-        token = IERC20(_token);
+        token = _token;
     }
 
     struct Student {
