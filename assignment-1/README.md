@@ -1,9 +1,9 @@
-<<<<<<< HEAD
+
 ## Where are structs, mappings, and arrays stored?
 
 ### Structs
 
-Structs can be stored in two places depending on how they are declared:
+Structs can be stored in two places, depending on how they are declared:
 
 - **Storage**: When declared at the contract level or referenced using `storage`, they are saved permanently on the blockchain.
 - **Memory**: When created inside a function using `memory`, they exist only during execution and disappear afterward.
@@ -128,4 +128,5 @@ In short:
 
 - Storage = permanent and shared state.
 - Memory = temporary working data used during execution.
+
 >>>>>>> 3e904e1 (Initial commit - smart contract week)
