@@ -9,6 +9,8 @@ contract PropertyMgmt is AccessControl {
 	ERC20 public token;
 
 	constructor(address _token) {
+        require(_token != address(0), "zero token");
+        owner = msg.sender;
 		_setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
 		token = ERC20(_token);
 	}
